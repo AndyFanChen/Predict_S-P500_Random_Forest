@@ -20,9 +20,9 @@ Define x (all data merged) and y (next day goes up or down), and split train set
 
 <img src="https://github.com/AndyFanChen/SP500_Random_Forest_Predict/blob/main/Profit_Plot.png" width="500" height="350">
 
-X-axis: Date
-Y-axis: Return (pips)
-Dark green line: cumulative return (pips) of our strategy
+X-axis: Date  
+Y-axis: Return (pips)  
+Dark green line: cumulative return (pips) of our strategy  
 Light Green line: cumulative return (pips) of buy and hold
 
 <img src="https://github.com/AndyFanChen/SP500_Random_Forest_Predict/blob/main/Return_Table.png" width="500" height="320">
