@@ -18,7 +18,7 @@ Define x (all data merged) and y (next day goes up or down), and split train set
 
 ## Result
 
-<img src="https://hackmd.io/_uploads/H1ELiXynp.png" width="500" height="350">
+<img src="https://github.com/AndyFanChen/SP500_Random_Forest_Predict/blob/main/Profit_Plot.png" width="500" height="350">
 
 X-axis: Date
 Y-axis: Return (pips)
