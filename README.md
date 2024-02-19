@@ -2,14 +2,14 @@
 
 ## Result
 * achieves an annualized return 9% higher than the market index, with lower volatility than the market index  
-<img src="https://github.com/AndyFanChen/SP500_Random_Forest_Predict/blob/main/Profit_Plot.png" width="500" height="350">
+<img src="https://github.com/AndyFanChen/SP500_Random_Forest_Predict/blob/main/Profit_Plot.png">
 
 * X-axis: Date  
 * Y-axis: Return (pips)  
 * Dark green line: cumulative return (pips) of our strategy  
 * Light Green line: cumulative return (pips) of buy and hold
 
-<img src="https://github.com/AndyFanChen/SP500_Random_Forest_Predict/blob/main/Return_Table.png" width="500" height="320">
+<img src="https://github.com/AndyFanChen/SP500_Random_Forest_Predict/blob/main/Return_Table.png">
 
 ## Execute
 `python3 rf_sp500_predict.py`
