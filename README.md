@@ -1,20 +1,23 @@
 # Predict E-mini S&P 500 By Random Forest
-* First step: preprocess and merge tech and macroeconomics data
-* Second step: creat x and y then used random forest model to train use OOB score to do evaluation
-* Third step: show the result about profit, volatility
+
 ## Result
 * achieves an annualized return 9% higher than the market index, with lower volatility than the market index  
 <img src="https://github.com/AndyFanChen/SP500_Random_Forest_Predict/blob/main/Profit_Plot.png" width="500" height="350">
 
-X-axis: Date  
-Y-axis: Return (pips)  
-Dark green line: cumulative return (pips) of our strategy  
-Light Green line: cumulative return (pips) of buy and hold
+* X-axis: Date  
+* Y-axis: Return (pips)  
+* Dark green line: cumulative return (pips) of our strategy  
+* Light Green line: cumulative return (pips) of buy and hold
 
 <img src="https://github.com/AndyFanChen/SP500_Random_Forest_Predict/blob/main/Return_Table.png" width="500" height="320">
 
 ## Execute
 `python3 rf_sp500_predict.py`
+
+* First step: preprocess and merge tech and macroeconomics data
+* Second step: creat x and y then used random forest model to train use OOB score to do evaluation
+* Third step: show the result about profit, volatility
+
 ## Preprocess and merge Data
 
 Use `DataPreprocess` class to preprocess data
