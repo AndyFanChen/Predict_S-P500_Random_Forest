@@ -2,6 +2,17 @@
 * First step: preprocess and merge tech and macroeconomics data
 * Second step: creat x and y then used random forest model to train use OOB score to do evaluation
 * Third step: show the result about profit, volatility
+## Result
+* achieves an annualized return 9% higher than the market index, with lower volatility than the market index  
+<img src="https://github.com/AndyFanChen/SP500_Random_Forest_Predict/blob/main/Profit_Plot.png" width="500" height="350">
+
+X-axis: Date  
+Y-axis: Return (pips)  
+Dark green line: cumulative return (pips) of our strategy  
+Light Green line: cumulative return (pips) of buy and hold
+
+<img src="https://github.com/AndyFanChen/SP500_Random_Forest_Predict/blob/main/Return_Table.png" width="500" height="320">
+
 ## Execute
 `python3 rf_sp500_predict.py`
 ## Preprocess and merge Data
@@ -16,16 +27,7 @@ Use `MLTrainEval` class to train and evaluate.
 
 Define x (all data merged) and y (next day goes up or down), and split train set (2005 to 2017) and test set (2018 to 2021), use oob score to do validation, also select few most important indicator in this step.
 
-## Result
 
-<img src="https://github.com/AndyFanChen/SP500_Random_Forest_Predict/blob/main/Profit_Plot.png" width="500" height="350">
-
-X-axis: Date  
-Y-axis: Return (pips)  
-Dark green line: cumulative return (pips) of our strategy  
-Light Green line: cumulative return (pips) of buy and hold
-
-<img src="https://github.com/AndyFanChen/SP500_Random_Forest_Predict/blob/main/Return_Table.png" width="500" height="320">
 
 
 
