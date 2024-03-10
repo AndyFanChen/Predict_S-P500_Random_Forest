@@ -14,7 +14,6 @@ warnings.filterwarnings('ignore')
 
 
 def creat_y(merged_data):
-    # shift(-1)代表今天的與明天的比明天漲
     merged_data['week_trend'] = np.where(
         merged_data['open'].shift(-2) > merged_data['open'].shift(-1), 1, 0)
     merged_data.dropna(inplace=True, axis=0)
@@ -23,7 +22,6 @@ def creat_y(merged_data):
 
 def data_split(merged_data):
     split_point = int(merged_data.shape[0] * 0.75)
-    # 切割成學習樣本以及測試樣本
     train = merged_data.iloc[:split_point, 1:].copy()
     test = merged_data.iloc[split_point:-1, 1:].copy()
     for i in range(train.shape[1]):
@@ -57,8 +55,8 @@ def ml_training(train_X, train_y, test_X, test_y, max_features):
     oob_score = model.oob_score_
     print(f"oob_score {oob_score}")
     feature_names = train_X.columns
-
-    # 印出各因子重要程度
+    
+    # can choose feature by this score
     importances = model.feature_importances_
     forest_importances = pd.Series(importances, index=feature_names).sort_values()
     print(f"forest_importances {forest_importances}")
@@ -96,7 +94,6 @@ def profit_cal(test):
                 out_price = test['open'].iloc[i + 2]
                 test['IfTrade'].iloc[i + 1] = "Long"
                 profit = out_price - in_price
-                # 算成本
                 if i == 0:
                     profit -= cost
                     cost_count += 1
@@ -154,8 +151,6 @@ def profit_cal(test):
     return profit_list, SP500_profit
 
 def plot_loss(test, profit_list, SP500_profit, dpi=500):
-    # npProfit = np.array(self.profitList)
-    # 策略損益
     trade_date = test.loc[(test['IfTrade'] == "Long") | (test['IfTrade'] == "Short")]['交易日期']
     sum_list = []
     accumulate = 0
